@@ -1,0 +1,21 @@
+{
+  "name": "gdg-task1-campus-sensor-monitoring-ts",
+  "version": "1.0.0",
+  "description": "GDG Tech Wildcard Entry \u2014 Task 1: Campus Sensor Monitoring and Alerts (TypeScript, O(1) Circular Sliding-Window Aggregator, TypedArray Ring Buffer, Group-Commit CRC32 WAL)",
+  "private": true,
+  "scripts": {
+    "build": "node scripts/build-ts.js",
+    "start": "node dist/server.js",
+    "simulator": "node dist/simulator-and-load-test.js",
+    "load-test": "node dist/simulator-and-load-test.js",
+    "test": "node dist/simulator-and-load-test.js"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^18.0.0",
+    "typescript": "^5.4.0"
+  },
+  "license": "MIT"
+}

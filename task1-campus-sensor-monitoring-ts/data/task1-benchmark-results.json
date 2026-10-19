@@ -1,0 +1,181 @@
+{
+  "timestamp": "2026-10-19T03:06:49.801Z",
+  "requirementTarget": "10,000 readings in 1,000 ms (10,000 readings/sec)",
+  "burstTest": {
+    "totalReadings": 10000,
+    "batchSize": 250,
+    "totalBatches": 40,
+    "concurrency": 10,
+    "totalWallClockMs": 182.89,
+    "sustainedThroughputReadingsPerSec": 54678,
+    "passedUnderOneSecond": true,
+    "headroomFactor": 5.47,
+    "batchLatencyMs": {
+      "min": 28.139,
+      "p50": 32.674,
+      "p95": 82.833,
+      "p99": 83.287,
+      "max": 83.287
+    }
+  },
+  "singleReadingHttpTest": {
+    "totalSingleRequests": 1000,
+    "totalWallClockMs": 980.77,
+    "requestsPerSec": 1020,
+    "latencyMs": {
+      "min": 7.125,
+      "p50": 18.208,
+      "p95": 30.21,
+      "p99": 45.259,
+      "max": 47.415
+    }
+  },
+  "memoryAndStorage": {
+    "heapBeforeMb": 7.33,
+    "heapAfterMb": 8.54,
+    "heapDeltaMb": 1.21,
+    "metrics": {
+      "totalReadingsIngested": 11011,
+      "totalSingleRequests": 1011,
+      "totalBatchRequests": 40,
+      "activeSensorStreams": 14,
+      "totalRules": 3,
+      "enabledRules": 3,
+      "totalAlerts": 3,
+      "openAlerts": 2,
+      "acknowledgedAlerts": 0,
+      "resolvedAlerts": 1,
+      "ringBuffer": {
+        "capacity": 65536,
+        "totalWritten": 11011,
+        "internedStringsCount": 12,
+        "bufferUtilizationPct": 16.8
+      },
+      "wal": {
+        "currentSeq": 1068,
+        "pendingWriteBehindFrames": 0,
+        "totalFramesPersisted": 1068,
+        "totalGroupCommits": 49,
+        "corruptedFramesSkipped": 0,
+        "filePath": "/working_dir/c_0e4ff5cbf660f7c4/artifacts/file_generation/ttl=63d/intermediate/task1-campus-sensor-monitoring-ts/data/task1-benchmark.wal.ndjson"
+      },
+      "memoryUsageMb": 8.82
+    }
+  },
+  "sampleAlerts": [
+    {
+      "id": "alt_0ee7041e_2",
+      "ruleId": "rule-temp-spike",
+      "ruleName": "Critical Temperature Spike (Single Reading)",
+      "ruleKind": "SINGLE_READING",
+      "sensorId": "library-floor-2",
+      "metricType": "temperature",
+      "triggeredValue": 36.2,
+      "threshold": 34,
+      "operator": ">",
+      "sampleCount": 1,
+      "anomalyZScore": 3.51,
+      "status": "OPEN",
+      "occurrences": 3,
+      "firstTriggeredAt": "2026-10-19T03:06:48.568Z",
+      "lastTriggeredAt": "2026-10-19T03:06:48.744Z",
+      "readingTimestamp": "2026-10-12T10:30:00Z"
+    },
+    {
+      "id": "alt_a158b6b4_3",
+      "ruleId": "rule-temp-spike",
+      "ruleName": "Critical Temperature Spike (Single Reading)",
+      "ruleKind": "SINGLE_READING",
+      "sensorId": "cafeteria-west",
+      "metricType": "temperature",
+      "triggeredValue": 36.2,
+      "threshold": 34,
+      "operator": ">",
+      "sampleCount": 1,
+      "anomalyZScore": 3.61,
+      "status": "OPEN",
+      "occurrences": 1,
+      "firstTriggeredAt": "2026-10-19T03:06:48.689Z",
+      "lastTriggeredAt": "2026-10-19T03:06:48.689Z",
+      "readingTimestamp": "2026-10-12T10:31:29.000Z"
+    },
+    {
+      "id": "alt_2274bbd5_1",
+      "ruleId": "rule-10m-avg-temp",
+      "ruleName": "Sustained 10-Minute High Temperature Average",
+      "ruleKind": "TIME_WINDOW",
+      "sensorId": "library-floor-2",
+      "metricType": "temperature",
+      "triggeredValue": 30.0882,
+      "threshold": 30,
+      "operator": ">",
+      "windowSeconds": 600,
+      "aggregator": "AVG",
+      "sampleCount": 17,
+      "anomalyZScore": 0,
+      "status": "OPEN",
+      "occurrences": 13,
+      "firstTriggeredAt": "2026-10-19T03:06:48.554Z",
+      "lastTriggeredAt": "2026-10-19T03:06:48.604Z",
+      "readingTimestamp": "2026-10-12T10:25:00.000Z"
+    }
+  ],
+  "sampleStreams": [
+    {
+      "sensorId": "chem-lab-101",
+      "metricType": "air_quality",
+      "windowSeconds": 600,
+      "count": 1250,
+      "avg": 27,
+      "min": 23,
+      "max": 31,
+      "rateOfChangePerMin": 1.216,
+      "welfordMean": 27.11,
+      "welfordStdDev": 4.819,
+      "latestValue": 29,
+      "latestTimestampMs": 1791801298000
+    },
+    {
+      "sensorId": "library-floor-2",
+      "metricType": "temperature",
+      "windowSeconds": 600,
+      "count": 1380,
+      "avg": 26.083,
+      "min": 22,
+      "max": 36.2,
+      "rateOfChangePerMin": -0.504,
+      "welfordMean": 26.101,
+      "welfordStdDev": 2.79,
+      "latestValue": 26.5,
+      "latestTimestampMs": 1791801320920
+    },
+    {
+      "sensorId": "auditorium-main",
+      "metricType": "occupancy",
+      "windowSeconds": 600,
+      "count": 1250,
+      "avg": 26,
+      "min": 22,
+      "max": 30,
+      "rateOfChangePerMin": 1.216,
+      "welfordMean": 26,
+      "welfordStdDev": 2.83,
+      "latestValue": 30,
+      "latestTimestampMs": 1791801299000
+    },
+    {
+      "sensorId": "server-room-b1",
+      "metricType": "co2_ppm",
+      "windowSeconds": 600,
+      "count": 1250,
+      "avg": 27,
+      "min": 23,
+      "max": 31,
+      "rateOfChangePerMin": 1.216,
+      "welfordMean": 27,
+      "welfordStdDev": 2.83,
+      "latestValue": 31,
+      "latestTimestampMs": 1791801300000
+    }
+  ]
+}
