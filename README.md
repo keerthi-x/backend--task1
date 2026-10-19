@@ -1,18 +1,4 @@
-# GDG Tech Wildcard Entry — Task 1: Campus Sensor Monitoring and Alerts
-
-A high-throughput, zero-external-runtime-dependency **TypeScript** backend service that ingests individual and batched campus sensor readings, evaluates single-reading and rolling time-window alert rules in **$O(1)$ amortized time**, and provides full alert lifecycle management (`OPEN` $\rightarrow$ `ACKNOWLEDGED` $\rightarrow$ `RESOLVED`) plus a built-in campus sensor simulator and 10,000-reading/sec load-test suite.
-
-Built in strict compliance with **General Submission Guideline #4** (*"Do not replace required core logic with a library when the task explicitly requires a custom implementation"*).
-
----
-
-## Submission Links (Fill Before Submitting)
-
-- **GitHub Repository URL:** `__________________________________________________`
-- **Live Interactive Demo / Deployment URL (Optional):** `__________________________________________________`
-
----
-
+# Task 1: Campus Sensor Monitoring and Alerts
 ## 1. Prerequisites, Installation & Configuration
 
 ### Prerequisites
